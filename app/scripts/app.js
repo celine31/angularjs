@@ -10,23 +10,31 @@
  */
 angular
   .module('coursExoApp', [
-    'ngRoute', 'ui.bootstrap'
+    'ngAnimate',
+    'ngCookies',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'ngTouch'
   ])
   .config(function ($routeProvider) {
     $routeProvider
+      .when('/', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl',
+        controllerAs: 'about'
+      })
       .when('/popular', {
-        templateUrl: 'views/movies.html',
-        controller: 'PopularCtrl'
-      })
-      .when('/search/:query', {
-        templateUrl: 'views/movies.html',
-        controller: 'SearchCtrl'
-      })
-      .when('/info/:id', {
-        templateUrl: 'views/info.html',
-        controller: 'InfoCtrl'
+        templateUrl: 'views/popular.html',
+        controller: 'PopularCtrl',
+        controllerAs: 'popular'
       })
       .otherwise({
-        redirectTo: '/popular'
+        redirectTo: '/'
       });
   });

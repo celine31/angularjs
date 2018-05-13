@@ -31,12 +31,12 @@ angular.module('coursExoApp')
         $scope.clickPredicateName = function(){
             $scope.orderByReverse = !$scope.orderByReverse;
             $scope.orderByPredicate = 'title';
-        }
+        };
 
         $scope.clickPredicateRate = function(){
             $scope.orderByReverse = !$scope.orderByReverse;
             $scope.orderByPredicate = 'vote_average';
-        }
+        };
 
         $scope.loadMovies();
   });

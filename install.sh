@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo '*** SERVER INSTALLATION ***'
-sudo npm install express
-sudo npm install moviedb 
+ npm install express
+ npm install moviedb 
 
 echo '*** CLIENT INSTALLATION ***'
-sudo yo angular
+ yo angular

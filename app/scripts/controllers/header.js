@@ -12,5 +12,5 @@ angular.module('coursExoApp')
         $scope.query = ""
         $scope.searchAction = function(){
             $location.path("/search/" + $scope.query);
-        }
+        };
     });
